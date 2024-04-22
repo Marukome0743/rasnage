@@ -15,10 +15,10 @@ jobs:
           NUMBER: ${{ github.event.issue.number }}
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           MEMBERS: |
-            HaradaTakayuki
-            kazutan1230
-            Marukome0743
-            tanePON
+            HaradaTakayuki-
+            kazutan1230-
+            Marukome0743-
+            tanePON-
         run: |
           echo "$MEMBERS" |
             tail -n +2 |
