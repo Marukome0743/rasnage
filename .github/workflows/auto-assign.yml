@@ -13,10 +13,10 @@ on:
 env:
   GH_TOKEN: ${{ github.token }}
   MEMBERS: |
-    HaradaTakayuki-
-    kazutan1230-
-    Marukome0743-
-    tanePON-
+    HaradaTakayuki
+    kazutan1230
+    Marukome0743
+    tanePON
 
 jobs:
   assign:
