@@ -63,7 +63,7 @@ jobs:
         env:
           GH_TOKEN: ${{ github.token }}
         run: |
-          cat <<EOF > comment.md
+          cat << EOF > comment.md
           # 🚨Test Failed
           @${{ github.actor }}, your commit ${{ github.event.pull_request.head.sha }} failed the test.
 
