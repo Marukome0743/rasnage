@@ -77,9 +77,9 @@ jobs:
             echo "\`\`\`shell"
             echo "$RESULT"
             echo "\`\`\`"
-            echo "</details>\n"
-            echo '👀[View in Actions](https://github.com/$REPO/actions/runs/$RUN_ID)'
-            echo '<!-- generated-comment [Bun CI]($WORKFLOW_REF) -->'
+            echo '</details>'
+            echo "\n👀[View in Actions](https://github.com/$REPO/actions/runs/$RUN_ID)"
+            echo "<!-- generated-comment [Bun CI]($WORKFLOW_REF) -->""
             echo 'EOF'
           } >> $GITHUB_ENV
 
