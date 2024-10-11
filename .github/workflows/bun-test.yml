@@ -73,7 +73,7 @@ jobs:
             echo '# ❌Test Failed'
             echo "@$ACTOR, your commit $SHA failed the test.\n"
             echo '<details>'
-            echo '<summary>Test Log</summary>'
+            echo '<summary>Show Test Log</summary>'
             echo "\`\`\`shell"
             echo "$RESULT"
             echo "\`\`\`"
