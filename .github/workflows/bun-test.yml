@@ -25,6 +25,9 @@ on:
       - "*config.*"
   workflow_dispatch:
 
+permissions:
+  pull-requests: write
+
 jobs:
   test:
     runs-on: ubuntu-24.04
