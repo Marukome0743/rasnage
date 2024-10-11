@@ -94,7 +94,7 @@ jobs:
               issue_number: context.issue.number,
             })
             const testComment = comments.find(comment => {
-              return comment.user.type === 'Bot' && comment.body.includes("# ❌Test Failed")
+              return comment.user.type === 'Bot' && comment.body.includes('# ❌Test Failed')
             })
             if (testComment) {
               github.rest.issues.updateComment({
