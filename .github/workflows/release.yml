@@ -10,6 +10,7 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
+    if: github.repository_owner == 'openup-labtakizawa'
 
     steps:
       - name: Checkout
