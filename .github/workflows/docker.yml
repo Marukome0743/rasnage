@@ -88,6 +88,12 @@ jobs:
           username: ${{ github.repository_owner }}
           password: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Get major version number
+        if: github.ref_type == 'tag'
+        run: echo "MAJOR_VERSION=$(echo $TAG | cut -b 2)" >> $GITHUB_ENV
+        env:
+          TAG: ${{ github.ref_name }}
+
       - name: Docker Meta
         id: meta
         uses: docker/metadata-action@v5
@@ -99,7 +105,7 @@ jobs:
           tags: |
             type=semver,pattern={{version}}
             type=semver,pattern={{major}}.{{minor}}
-            type=semver,pattern={{major}},enable={{major}} != 0
+            type=semver,pattern={{major}},enable=${{ env.MAJOR_VERSION != 0 }}
             type=ref,event=pr,prefix=pr-
             type=raw,value=canary,enable=${{ github.event_name != 'pull_request_target' }}
         env:
